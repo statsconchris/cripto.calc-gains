@@ -11,7 +11,7 @@ Download the file `bitcalc_EN.html` and is ready to use.
 
 ### Wordpress
 
-1. Copy the following lines to your `functions.php` page in your Wordpress theme
+1. Copy the following code to `functions.php` page in your Wordpress theme
 ```markdown
 function wpb_hook_javascript() {
   if (is_single ('80')) { 
@@ -44,11 +44,11 @@ function wpb_hook_javascript() {
 }
 add_action('wp_head', 'wpb_hook_javascript');
 ```
-**Notice that the above code doesn't have opening and closing PHP tags. This is ok! Do not change. functions.php doesn't require these tags.**
+**Notice that the above code doesn't have opening and closing PHP tags. This is ok! Do not change it. functions.php doesn't require these tags.**
 
 2. Replace 80 in is_single('') with your post id
 
-3. Add the following lines in your post (html):
+3. Add the following code to your post (html):
 ```markdown
 	<h1>First calculation</h1>
             <div id="content">
