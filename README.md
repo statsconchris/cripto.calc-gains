@@ -1,4 +1,5 @@
-## To read instructions in english click in
+## <button>English</button>
+## <button>Espanol</button>
 
 You can use the [editor on GitHub](https://github.com/statsconchris/nepy_bitCalculator/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
