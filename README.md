@@ -1,7 +1,7 @@
 ## [English](https://github.com/statsconchris/bitstamp.calculator/tree/English)
 ## <button>Espanol</button>
 
-You can use the [editor on GitHub](https://github.com/statsconchris/nepy_bitCalculator/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+To check the functionality of this javascript code and further details about its origin please visit: [nepy_bitstamp.calculator](http://www.nepy.pe/en/crypto/invest-in-cryptocurrencies-basic-math-to-start-winning/) to maintain and preview the content for your website in Markdown files.
 
 ## Para leer las instrucciones en español click 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
