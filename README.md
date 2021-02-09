@@ -1,6 +1,6 @@
-To check the functionality of this javascript code and further details please visit: [nepy.pe/en/bitstamp.calculator.](http://www.nepy.pe/en/crypto/invest-in-cryptocurrencies-basic-math-to-start-winning/) 
+## Bitstamp.calculator : A javascript code to calculate gains in crypto exchanges
+To check the functionality of this code refer to the article: [nepy.pe/en/bitstamp.calculator.](http://www.nepy.pe/en/crypto/invest-in-cryptocurrencies-basic-math-to-start-winning/) 
 
-To read the instructions / installation guide in english visit: [english.version](https://github.com/statsconchris/bitstamp.calculator/tree/English) 
 
 
 ## Para leer las instrucciones en español click 
