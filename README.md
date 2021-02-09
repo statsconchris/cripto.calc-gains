@@ -1,7 +1,7 @@
-## [English](https://github.com/statsconchris/bitstamp.calculator/tree/English)
-## <button>Espanol</button>
+To check the functionality of this javascript code and further details please visit: [nepy.pe/en/bitstamp.calculator.](http://www.nepy.pe/en/crypto/invest-in-cryptocurrencies-basic-math-to-start-winning/) 
 
-To check the functionality of this javascript code and further details about its origin please visit: [nepy_bitstamp.calculator](http://www.nepy.pe/en/crypto/invest-in-cryptocurrencies-basic-math-to-start-winning/) to maintain and preview the content for your website in Markdown files.
+To read the instructions / installation guide in english visit: [english.version](https://github.com/statsconchris/bitstamp.calculator/tree/English) 
+
 
 ## Para leer las instrucciones en español click 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
