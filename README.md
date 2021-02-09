@@ -1,12 +1,57 @@
 ## Bitstamp.calculator : A javascript code to calculate gains in crypto exchanges
 To check the functionality of this code refer to the article: [nepy.pe/en/bitstamp.calculator.](http://www.nepy.pe/en/crypto/invest-in-cryptocurrencies-basic-math-to-start-winning/) 
 
+There are two ways to use this code:
+1. Website
+2. Wordpress
+
+### Website
+
+Download the file `bitcalc_EN.html` and is ready to use.
+
+### Wordpress
+
+1. Copy the following lines to your `functions.php` page in your Wordpress theme
+```markdown
+function wpb_hook_javascript() {
+  if (is_single ('80')) { 
+    ?>
+        <script type="text/javascript">
+                    function bitcalc() {
+					var pcVal = document.getElementById("Pc").value;
+					var pvVal = document.getElementById("Pv").value;
+					var icVal = document.getElementById("Ic").value;
+					var ivVal = document.getElementById("Iv").value;
+					var qVal = document.getElementById("Q").value;
+
+					var result = (pvVal * qVal * (1 - (ivVal / 100) )) - (pcVal * qVal * (1 + (icVal / 100) ));
+					document.getElementById("Resultado").value = result;
+				    }
+        </script>
+		<script type="text/javascript">
+                    function bitcalc2() {
+					var pc2Val = document.getElementById("Pc2").value;
+					var ic2Val = document.getElementById("Ic2").value;
+					var iv2Val = document.getElementById("Iv2").value;
+
+					var result2 = pc2Val * (+iv2Val + +ic2Val) / (100 - (1*iv2Val)) ;
+					document.getElementById("Resultado2").value = result2;
+				    }
+        </script>
+    <?php
+  }
+	  
+}
+add_action('wp_head', 'wpb_hook_javascript');
+```
 
 
-## Para leer las instrucciones en español click 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Instructions:
+i)
 
-### Markdown
+# Install in a website
+
+# Install in
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
