@@ -44,13 +44,13 @@ function wpb_hook_javascript() {
 }
 add_action('wp_head', 'wpb_hook_javascript');
 ```
-Notice that the above code doesn't have opening and closing PHP tags. This is ok! functions.php doesn't work if you choose to add the tags.
+	Notice that the above code doesn't have opening and closing PHP tags. This is ok! Do not change. functions.php doesn't require these tags.
 
 2. Replace 80 in is_single('') with your post id
 
 3. Add the following lines in your post (html):
 ```markdown
-<h1>First calculation</h1>
+	<h1>First calculation</h1>
             <div id="content">
                 <h3>Calculate gain:</h3>
                     <label>Buying price (Pc):</label>
