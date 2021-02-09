@@ -1,39 +1,88 @@
-To check the functionality of this javascript code and further details please visit: [nepy.pe/en/bitstamp.calculator.](http://www.nepy.pe/en/crypto/invest-in-cryptocurrencies-basic-math-to-start-winning/) 
+## Bitstamp.calculator : Un código javascript para calcular las ganancias en las plataformas de intercambio de criptomonedas
+Para ver el funcionamiento de este código ir al artículo: [nepy.pe/en/bitstamp.calculator.](http://www.nepy.pe/es/cripto/invertir-en-criptomonedas-la-matematica-basica-para-empezar-a-ganar/) 
 
-To read the instructions / installation guide in english visit: [english.version](https://github.com/statsconchris/bitstamp.calculator/tree/English) 
+Hay dos formas de usar este código:
+1. Website
+2. Wordpress
 
+### Website
 
-## Para leer las instrucciones en español click 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Descargar el archivo `bitcalc_ES.html` y listo.
 
-### Markdown
+### Wordpress
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+1. Copiar el siguiente código en `functions.php` ubicado en tu editor de tema en Wordpress
 ```markdown
-Syntax highlighted code block
+function wpb_hook_javascript() {
+  if (is_single ('80')) { 
+    ?>
+        <script type="text/javascript">
+                    function bitcalc() {
+					var pcVal = document.getElementById("Pc").value;
+					var pvVal = document.getElementById("Pv").value;
+					var icVal = document.getElementById("Ic").value;
+					var ivVal = document.getElementById("Iv").value;
+					var qVal = document.getElementById("Q").value;
 
-# Header 1
-## Header 2
-### Header 3
+					var result = (pvVal * qVal * (1 - (ivVal / 100) )) - (pcVal * qVal * (1 + (icVal / 100) ));
+					document.getElementById("Resultado").value = result;
+				    }
+        </script>
+		<script type="text/javascript">
+                    function bitcalc2() {
+					var pc2Val = document.getElementById("Pc2").value;
+					var ic2Val = document.getElementById("Ic2").value;
+					var iv2Val = document.getElementById("Iv2").value;
 
-- Bulleted
-- List
+					var result2 = pc2Val * (+iv2Val + +ic2Val) / (100 - (1*iv2Val)) ;
+					document.getElementById("Resultado2").value = result2;
+				    }
+        </script>
+    <?php
+  }
+	  
+}
+add_action('wp_head', 'wpb_hook_javascript');
+```
+**Observar que el código superior no tiene las etiquetas PHP de apertura y cierre. Esto está bien. No modificar. `functions.php` no requiere estas etiquetas.**
 
-1. Numbered
-2. List
+2. Reemplazar 80 en is_single('') con el id de tu post 
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](https://github.com/statsconchris/bitstamp.calculator/tree/English) and ![Image](src)
+3. Añadir el siguiente código en tu post (html):
+```markdown
+        <h1>El primer cálculo</h1>
+            <div id="content">
+                <h3>Calculando la ganancia:</h3>
+                    <label>Precio de compra (Pc):</label>
+                    <input id="Pc" type="text" placeholder="" />
+                    <label>Precio de venta (Pv):</label>
+                    <input id="Pv" type="text" placeholder="" />
+                    <label>Comisión de compra (Ic):</label>
+                    <input id="Ic" type="text" placeholder="" />
+                    <label>Comisión de venta (Iv):</label>
+                    <input id="Iv" type="text" placeholder="" />
+                    <label>Cantidad (Q):</label>
+                    <input id="Q" type="text" placeholder="" />
+                    <label></label>
+                    <input id="Run" onClick='bitcalc()' type="button" value="Calcular" />
+                    <label></label>
+                    <input id="Resultado" style="font-style: italic; padding-left: -2px;" readonly="readonly" type="text" value="La ganancia es..." />
+            </div>
+        
+        <h1>El segundo cálculo</h1>
+            <div id="content">
+                <h3>Calculando el crecimiento mínimo para empezar a ganar:</h3>
+                    <label>Precio de compra (Pc):</label>
+                    <input id="Pc2" type="text" placeholder="" />
+                    <label>Comisión de compra (Ic):</label>
+                    <input id="Ic2" type="text" placeholder="" />
+                    <label>Comisión de venta (Iv):</label>
+                    <input id="Iv2" type="text" placeholder="" />
+                    <label></label>
+                    <input id="Run" onClick='bitcalc2()' type="button" value="Calcular" />
+                    <label></label>
+                    <input id="Resultado2" style="font-style: italic; padding-left: -2px;" readonly="readonly" type="text" value="El crecimiento mínimo es..." />
+            </div>
 ```
 
-For more details see [GitHub Flavored Markdown](https://github.com/statsconchris/bitstamp.calculator/tree/English).
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/statsconchris/nepy_bitCalculator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
