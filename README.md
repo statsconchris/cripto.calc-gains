@@ -25,7 +25,7 @@ function wpb_hook_javascript() {
 					var qVal = document.getElementById("Q").value;
 
 					var result = (pvVal * qVal * (1 - (ivVal / 100) )) - (pcVal * qVal * (1 + (icVal / 100) ));
-					document.getElementById("Resultado").value = result;
+					document.getElementById("Result").value = result;
 				    }
         </script>
 		<script type="text/javascript">
@@ -35,7 +35,7 @@ function wpb_hook_javascript() {
 					var iv2Val = document.getElementById("Iv2").value;
 
 					var result2 = pc2Val * (+iv2Val + +ic2Val) / (100 - (1*iv2Val)) ;
-					document.getElementById("Resultado2").value = result2;
+					document.getElementById("Result2").value = result2;
 				    }
         </script>
     <?php
@@ -44,41 +44,45 @@ function wpb_hook_javascript() {
 }
 add_action('wp_head', 'wpb_hook_javascript');
 ```
+Notice that the above code doesn't have opening and closing PHP tags. This is ok! functions.php doesn't work if you choose to add the tags.
 
+2. Replace 80 in is_single('') with your post id
 
-### Instructions:
-i)
-
-# Install in a website
-
-# Install in
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+3. Add the following lines in your post (html):
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](https://github.com/statsconchris/bitstamp.calculator/tree/English) and ![Image](src)
+<h1>First calculation</h1>
+            <div id="content">
+                <h3>Calculate gain:</h3>
+                    <label>Buying price (Pc):</label>
+                    <input id="Pc" type="text" placeholder="" />
+                    <label>Selling price (Pv):</label>
+                    <input id="Pv" type="text" placeholder="" />
+                    <label>Buying fee (Ic):</label>
+                    <input id="Ic" type="text" placeholder="" />
+                    <label>Selling fee (Iv):</label>
+                    <input id="Iv" type="text" placeholder="" />
+                    <label>Quantity (Q):</label>
+                    <input id="Q" type="text" placeholder="" />
+                    <label></label>
+                    <input id="Run" onClick='bitcalc()' type="button" value="Calculate" />
+                    <label></label>
+                    <input id="Result" style="font-style: italic; padding-left: -2px;" readonly="readonly" type="text" value="The gain is..." />
+            </div>
+        
+        <h1>Second calculation</h1>
+            <div id="content">
+                <h3>Calculate the minimal growth to start winning:</h3>
+                    <label>Buying price (Pc):</label>
+                    <input id="Pc2" type="text" placeholder="" />
+                    <label>Buying fee (Ic):</label>
+                    <input id="Ic2" type="text" placeholder="" />
+                    <label>Selling fee (Iv):</label>
+                    <input id="Iv2" type="text" placeholder="" />
+                    <label></label>
+                    <input id="Run" onClick='bitcalc2()' type="button" value="Calculate" />
+                    <label></label>
+                    <input id="Result2" style="font-style: italic; padding-left: -2px;" readonly="readonly" type="text" value="The minimal growth is..." />
+            </div>
 ```
 
-For more details see [GitHub Flavored Markdown](https://github.com/statsconchris/bitstamp.calculator/tree/English).
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/statsconchris/nepy_bitCalculator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
