@@ -1,4 +1,4 @@
-## <button>English</button>
+## <a href="https://github.com/statsconchris/bitstamp.calculator/tree/English"><button>English</button></a>
 ## <button>Espanol</button>
 
 You can use the [editor on GitHub](https://github.com/statsconchris/nepy_bitCalculator/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
@@ -25,10 +25,10 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
+[Link](https://github.com/statsconchris/bitstamp.calculator/tree/English) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+For more details see [GitHub Flavored Markdown](https://github.com/statsconchris/bitstamp.calculator/tree/English).
 
 ### Jekyll Themes
 
