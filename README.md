@@ -1,4 +1,4 @@
-## <a href="https://github.com/statsconchris/bitstamp.calculator/tree/English"><button>English</button></a>
+## [English](https://github.com/statsconchris/bitstamp.calculator/tree/English)
 ## <button>Espanol</button>
 
 You can use the [editor on GitHub](https://github.com/statsconchris/nepy_bitCalculator/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
