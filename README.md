@@ -44,7 +44,7 @@ function wpb_hook_javascript() {
 }
 add_action('wp_head', 'wpb_hook_javascript');
 ```
-**Observar que el código superior no tiene las etiquetas PHP de apertura y cierre. Esto está bien. No modificar. `functions.php` no requiere estas etiquetas.**
+**Notar que el código superior no tiene las etiquetas de apertura y cierre de PHP. Esto está bien. No modificar. `functions.php` no requiere estas etiquetas.**
 
 2. Reemplazar 80 en is_single('') con el id de tu post 
 
