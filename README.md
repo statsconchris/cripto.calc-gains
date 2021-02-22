@@ -1,4 +1,4 @@
-## Bitstamp.calculator : A javascript code to calculate gains in crypto exchanges
+## Bitstamp.calculator : A JavaScript code to calculate gains in crypto exchanges
 To check the functionality of this code refer to the article: [nepy.pe/en/bitstamp.calculator.](http://www.nepy.pe/en/crypto/invest-in-cryptocurrencies-the-basic-math-of-trading-fees-to-start-winning/) 
 
 There are two ways to use this code:
