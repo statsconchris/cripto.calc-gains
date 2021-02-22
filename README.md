@@ -1,5 +1,5 @@
 ## Bitstamp.calculator : A javascript code to calculate gains in crypto exchanges
-To check the functionality of this code refer to the article: [nepy.pe/en/bitstamp.calculator.](http://www.nepy.pe/en/crypto/invest-in-cryptocurrencies-basic-math-to-start-winning/) 
+To check the functionality of this code refer to the article: [nepy.pe/en/bitstamp.calculator.](http://www.nepy.pe/en/crypto/invest-in-cryptocurrencies-the-basic-math-of-trading-fees-to-start-winning/) 
 
 There are two ways to use this code:
 1. Website
@@ -18,23 +18,23 @@ function wpb_hook_javascript() {
     ?>
         <script type="text/javascript">
                     function bitcalc() {
-					var pcVal = document.getElementById("Pc").value;
-					var pvVal = document.getElementById("Pv").value;
-					var icVal = document.getElementById("Ic").value;
-					var ivVal = document.getElementById("Iv").value;
+					var pbVal = document.getElementById("Pb").value;
+					var psVal = document.getElementById("Ps").value;
+					var ibVal = document.getElementById("Ib").value;
+					var isVal = document.getElementById("Is").value;
 					var qVal = document.getElementById("Q").value;
 
-					var result = (pvVal * qVal * (1 - (ivVal / 100) )) - (pcVal * qVal * (1 + (icVal / 100) ));
+					var result = (psVal * qVal * (1 - (isVal / 100) )) - (pbVal * qVal * (1 + (ibVal / 100) ));
 					document.getElementById("Result").value = result;
 				    }
         </script>
 		<script type="text/javascript">
                     function bitcalc2() {
-					var pc2Val = document.getElementById("Pc2").value;
-					var ic2Val = document.getElementById("Ic2").value;
-					var iv2Val = document.getElementById("Iv2").value;
+					var pb2Val = document.getElementById("Pb2").value;
+					var ib2Val = document.getElementById("Ib2").value;
+					var is2Val = document.getElementById("Is2").value;
 
-					var result2 = pc2Val * (+iv2Val + +ic2Val) / (100 - (1*iv2Val)) ;
+					var result2 = pb2Val * (+is2Val + +ib2Val) / (100 - (1*is2Val)) ;
 					document.getElementById("Result2").value = result2;
 				    }
         </script>
@@ -43,6 +43,7 @@ function wpb_hook_javascript() {
 	  
 }
 add_action('wp_head', 'wpb_hook_javascript');
+
 ```
 **Notice that the above code doesn't have opening and closing PHP tags. This is ok! Do not change it. functions.php doesn't require these tags.**
 
@@ -53,14 +54,14 @@ add_action('wp_head', 'wpb_hook_javascript');
 	<h1>First calculation</h1>
             <div id="content">
                 <h3>Calculate gain:</h3>
-                    <label>Buying price (Pc):</label>
-                    <input id="Pc" type="text" placeholder="" />
-                    <label>Selling price (Pv):</label>
-                    <input id="Pv" type="text" placeholder="" />
-                    <label>Buying fee (Ic):</label>
-                    <input id="Ic" type="text" placeholder="" />
-                    <label>Selling fee (Iv):</label>
-                    <input id="Iv" type="text" placeholder="" />
+                    <label>Buying price (Pb):</label>
+                    <input id="Pb" type="text" placeholder="" />
+                    <label>Selling price (Ps):</label>
+                    <input id="Ps" type="text" placeholder="" />
+                    <label>Buying fee (Ib):</label>
+                    <input id="Ib" type="text" placeholder="" />
+                    <label>Selling fee (Is):</label>
+                    <input id="Is" type="text" placeholder="" />
                     <label>Quantity (Q):</label>
                     <input id="Q" type="text" placeholder="" />
                     <label></label>
@@ -72,12 +73,12 @@ add_action('wp_head', 'wpb_hook_javascript');
         <h1>Second calculation</h1>
             <div id="content">
                 <h3>Calculate the minimal growth to start winning:</h3>
-                    <label>Buying price (Pc):</label>
-                    <input id="Pc2" type="text" placeholder="" />
-                    <label>Buying fee (Ic):</label>
-                    <input id="Ic2" type="text" placeholder="" />
-                    <label>Selling fee (Iv):</label>
-                    <input id="Iv2" type="text" placeholder="" />
+                    <label>Buying price (Pb):</label>
+                    <input id="Pb2" type="text" placeholder="" />
+                    <label>Buying fee (Ib):</label>
+                    <input id="Ib2" type="text" placeholder="" />
+                    <label>Selling fee (Is):</label>
+                    <input id="Is2" type="text" placeholder="" />
                     <label></label>
                     <input id="Run" onClick='bitcalc2()' type="button" value="Calculate" />
                     <label></label>
