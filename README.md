@@ -1,4 +1,4 @@
-## Bitstamp.calculator : Un código javascript para calcular las ganancias en las plataformas de intercambio de criptomonedas
+## Bitstamp.calculator : Un código JavaScript para calcular las ganancias en las plataformas de intercambio de criptomonedas
 Para ver el funcionamiento de este código y su análisis respectivo, ir al artículo: [nepy.pe/es/bitstamp.calculator.](http://www.nepy.pe/es/cripto/invertir-en-criptomonedas-la-matematica-de-las-comisiones-para-empezar-a-ganar/) 
 
 Hay dos formas de usar este código:
