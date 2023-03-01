@@ -1,18 +1,20 @@
-## Bitstamp.calculator : Un código JavaScript para calcular las ganancias en las plataformas de intercambio de criptomonedas
-Para ver el funcionamiento de este código y su análisis respectivo, ir al artículo: [nepy.pe/es/bitstamp.calculator.](http://www.nepy.pe/es/cripto/plataforma/invertir-en-criptomonedas-la-matematica-de-las-comisiones-para-empezar-a-ganar/) 
+## Invertir en criptomonedas. La matemática de las comisiones
+Considerando la plataforma Bitstamp, detallamos la matemática básica de las comisiones de compra y venta que todo inversionista en criptomonedas debe saber para empezar a ganar. Mencionamos a Coinmarketcap y los altcoins XRP, Gnosis y Litecoin. También brindamos una introducción al análisis de los datos estadísticos. Los cálculos fueron desarrollados en JavaScript.
+<hr>
 
-Hay dos formas de usar este código:
-1. Website
-2. Wordpress
+**Instruccciones**
 
-### Website
+Dos soluciones: `Website` y `Wordpress`.
 
-Descargar el archivo `bitcalc_ES.html` y listo.
+##### 1. Website
 
-### Wordpress
+Descargar el archivo `calc-gains.html` y listo.
 
-1. Copiar el siguiente código en `functions.php` ubicado en tu editor de tema en Wordpress
-```markdown
+##### 2. Wordpress
+
+2.1. Copiar el siguiente código en `functions.php` ubicado en tu editor de tema en Wordpress
+
+```javascript
 function wpb_hook_javascript() {
   if (is_single ('80')) { 
     ?>
@@ -46,10 +48,10 @@ add_action('wp_head', 'wpb_hook_javascript');
 ```
 **Notar que el código superior no tiene las etiquetas de apertura y cierre de PHP. Esto está bien. No modificar. `functions.php` no requiere estas etiquetas.**
 
-2. Reemplazar 80 en is_single('') con el id de tu post 
+2.2 Reemplazar `80` en `is_single('')` con el id de tu post 
 
-3. Añadir el siguiente código en tu post (html):
-```markdown
+2.3 Añadir el siguiente código en tu post (html):
+```html
         <h1>El primer cálculo</h1>
             <div id="content">
                 <h3>Calculando la ganancia:</h3>
@@ -84,5 +86,12 @@ add_action('wp_head', 'wpb_hook_javascript');
                     <input id="Resultado2" style="font-style: italic; padding-left: -2px;" readonly="readonly" type="text" value="El crecimiento mínimo es..." />
             </div>
 ```
+
+
+**Information**
+  
+- To check how the code works refer to the article: 
+  
+  [Invertir en criptomonedas. La matemática de las comisiones](https://nepy.pe/article.php?pid=62648b9fa8293&lan=es).
 
 
