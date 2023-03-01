@@ -94,9 +94,3 @@ add_action('wp_head', 'wpb_hook_javascript');
 - To check how the code works refer to the article: 
   
   [Invest in cryptocurrencies. The math behind the trading fees](https://nepy.pe/article.php?pid=62648b9fa8293&lan=en). 
-
-
-  
-  
-
-
