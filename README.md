@@ -1,18 +1,20 @@
-## Bitstamp.calculator : A JavaScript code to calculate gains in crypto exchanges
-To check the functionality of this code refer to the article: [nepy.pe/en/bitstamp.calculator.](http://www.nepy.pe/en/crypto/invest-in-cryptocurrencies-the-basic-math-of-trading-fees-to-start-winning/) 
+## Invest in cryptocurrencies. The math behind the trading fees
+Considering the Bitstamp exchange platform, we show the math behind the fees that every investor needs to know to start making profits. We talk about Coinmarketcap and the altcoins XRP, Gnosis, and Litecoin. We also give an introduction to the analysis of statistical data. The calculations were developed in JavaScript.
+<hr>
 
-There are two ways to use this code:
-1. Website
-2. Wordpress
+**Instructions**
 
-### Website
+Two solutions: `Website` and `Wordpress`.
 
-Download the file `bitcalc_EN.html` and is ready to use.
+##### 1. Website
 
-### Wordpress
+Download the file `calc-gains.html` and is ready to use.
 
-1. Copy the following code to `functions.php` page in your Wordpress theme
-```markdown
+##### 2. Wordpress
+
+2.1. Copy the following code to `functions.php` page in your Wordpress theme
+
+```javascript
 function wpb_hook_javascript() {
   if (is_single ('80')) { 
     ?>
@@ -45,12 +47,12 @@ function wpb_hook_javascript() {
 add_action('wp_head', 'wpb_hook_javascript');
 
 ```
-**Notice that the above code doesn't have opening and closing PHP tags. This is ok! Do not change it. functions.php doesn't require these tags.**
+**Notice that the above code doesn't have opening and closing PHP tags. This is ok! Do not change it, `functions.php` doesn't require these tags.**
 
-2. Replace 80 in is_single('') with your post id
+2.2 Replace `80` in `is_single('')` with your post id
 
-3. Add the following code to your post (html):
-```markdown
+2.3 Add the following code to your post (html):
+```html
 	<h1>First calculation</h1>
             <div id="content">
                 <h3>Calculate gain:</h3>
@@ -85,5 +87,16 @@ add_action('wp_head', 'wpb_hook_javascript');
                     <input id="Result2" style="font-style: italic; padding-left: -2px;" readonly="readonly" type="text" value="The minimal growth is..." />
             </div>
 ```
+
+
+**Information**
+  
+- To check how the code works refer to the article: 
+  
+  [Invest in cryptocurrencies. The math behind the trading fees](https://nepy.pe/article.php?pid=62648b9fa8293&lan=en). 
+
+
+  
+  
 
 
