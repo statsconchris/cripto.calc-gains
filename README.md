@@ -1,5 +1,5 @@
 ## Invertir en criptomonedas. La matemática de las comisiones
-Considerando la plataforma Bitstamp, detallamos la matemática básica de las comisiones de compra y venta que todo inversionista en criptomonedas debe saber para empezar a ganar. Mencionamos a Coinmarketcap y los altcoins XRP, Gnosis y Litecoin. También brindamos una introducción al análisis de los datos estadísticos. Los cálculos fueron desarrollados en JavaScript.
+Considerando la plataforma Bitstamp, detallamos la matemática básica de las comisiones de compra y venta y discutimos el crecimiento mínimo necesario para empezar a ganar. Los cálculos fueron desarrollados en JavaScript.
 <hr>
 
 **Instrucciones**
