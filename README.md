@@ -1,5 +1,5 @@
 ## Invest in cryptocurrencies. The math behind the trading fees
-Considering the Bitstamp exchange platform, we show the math behind the fees that every investor needs to know to start making profits. We talk about Coinmarketcap and the altcoins XRP, Gnosis, and Litecoin. We also give an introduction to the analysis of statistical data. The calculations were developed in JavaScript.
+Considering the Bitstamp exchange platform, we show the math behind the trading fees and discuss the minimum growth needed to start making profits. The calculations were developed in JavaScript.
 <hr>
 
 **Instructions**
